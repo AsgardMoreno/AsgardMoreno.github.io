@@ -1,0 +1,31 @@
+
+body {  /*dentro de las llaves escribimos lo que hara a todo body*/
+margin: 40px 50px 99px ;  /*100px va pegado, css utiliza los espacios para otras cosas*/
+background: #BAE200;
+font-size: 18px;
+} 
+input{
+    display: block; /*Margen y espacio entre inputs, para un input especifico se asigna clase*/
+    margin-bottom: 25px;
+    padding: 10px; /*Margen del texto dentro del cuadro input*/
+    text-align: center;
+    font-size: 1em; /*en pixeles o en em(1em=16px), para diseños relativos, cambia dependiendo del font-size del body*/
+    font-family: 'K2D', sans-serif; /*Solo se pueden cambiar por fuentes que tengas, o tambien se puede desde google fonts, embed */
+    color: #222;
+    background: #EEE;
+}
+
+.tipo2{ /*con classe para asignar a algo en especifico)*/
+    text-align: right;
+}
+input.tipo2 { /*aun mas especifico, tiene que ser input y clase tipo2*/
+font-size: 10px;
+}
+
+
+button{
+    font-size: 1.2em;
+    padding: 5px 25px;
+    border: blue;
+    border-top-style: solid;
+}

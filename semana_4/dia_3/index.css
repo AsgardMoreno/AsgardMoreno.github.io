@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box; /*Para que ajuste todo en base a porcentajes*/
+}
+
+
+body, input {
+    font-family: 'Share Tech Mono', monospace;
+    color: black
+}
+
+body{
+    margin: 0;
+    background: rgba(134, 98, 98, 0.712)
+}
+
+#contenedor {
+    width: 250px;
+    margin: 25px auto;
+    text-align: center;
+    background: rgb(42, 48, 48);
+    padding: 15px;
+}
+
+input{
+    width:100%;
+}
+h1{
+    margin: 0;
+}
+
+h2{
+    background: lightskyblue;
+}
+
+input, botton{
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    
+    border-width: 4px;
+    border-style: solid;
+    border-color: black rgba(0, 0, .20);
+
+    outline-color: whitesmoke;
+    
+}
+
+button{
+    width: 69px;
+    height: 69px;
+    margin: 7.8px;
+    font-size: 34px;
+}

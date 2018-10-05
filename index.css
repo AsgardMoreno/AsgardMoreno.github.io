@@ -1,0 +1,48 @@
+/*Para agrandar imagen, solo mover el width, lo hace proporcional si no se mueve el height*/
+
+*{
+    box-sizing: border-box;
+}
+
+body, input{
+    font-family: 'Slabo 27px', serif;
+    
+}
+
+header{
+    font-size: 50px;
+    text-align: center;
+    padding:20px;
+    background: gray
+}
+
+#contenedor{
+    width: 400px;
+    margin: 15px 5px;
+
+}
+
+img{
+    display: block;
+    width: 200px;
+    border-image-width: 3px;
+    border-image: 3px;
+    border-block-end-color: brown
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2{
+    background: lightskyblue;
+}
+
+ul a{
+    font-weight: bold;
+    color: darkslategray; 
+    text-shadow: 2px;
+    text-decoration-line: unset;
+    font-size:21px
+}
+

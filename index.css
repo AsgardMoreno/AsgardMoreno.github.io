@@ -6,43 +6,97 @@
 
 body, input{
     font-family: 'Slabo 27px', serif;
+    font-weight: bolder;
+    margin: 20px 90px;
+    shape-margin: 10%;
+    border: 20px;
+    background-color: white;
+    padding: 1%
     
+}
+
+#fondo{
+   width: 90%;
+   opacity: 0.9;
+}
+
+#backgroundImage{z-index: 1;}
+
+#backgroundImage:before {
+    content:"Fondo4" ;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("Fondo1");
+     background-repeat: repeat;
+     background-size: 100%;
+     opacity: 0.9;
+     filter:alpha(opacity=30);
+     width:100%;
+  } 
+
+#todo{
+    margin: 10px 80px;
+    background-color: #cac8c4cf
 }
 
 header{
     font-size: 50px;
     text-align: center;
-    padding:20px;
-    background: gray
+    padding:3px;
+    background: rgb(230, 89, 89);
+   
 }
 
 #contenedor{
     width: 400px;
-    margin: 15px 5px;
-
+    margin: -20px -15px;
 }
 
 img{
     display: block;
     width: 200px;
-    border-image-width: 3px;
-    border-image: 3px;
-    border-block-end-color: brown
+    background: black;
+    background-blend-mode: darken;
+    border-style: solid;
+    border-image-width: 5px;
+    margin: -48px 260px 10px;
+}
+
+#cuadro{
+    width: 30px;
+    height: 30px;
+    margin: 2px 480px;
+    background-color: black
 }
 
 h1{
     font-family: 'Josefin Sans', sans-serif;
+    background-color: rgba(248, 145, 0, 0.87)
+}
+
+#contenedor2{
+    width: 350px;
+    margin: 30px 80px;
+    
 }
 
 h2{
-    background: lightskyblue;
+    background: rgb(48, 165, 238);
+    margin: 10px -96px;
+    text-align: center;
+    padding-right: 121px;
+    font-size: 28px
 }
 
-ul a{
+ul.sem1, a{
     font-weight: bold;
-    color: darkslategray; 
-    text-shadow: 2px;
+    color: rgb(43, 1, 1);
     text-decoration-line: unset;
-    font-size:21px
+    font-size:28px;
+    
 }
 

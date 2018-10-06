@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body, input {
+    font-family: 'Lato', sans-serif;
+    color: black
+}
+
+header{
+    text-align: center;
+    font-size: 36px;
+}
+img{
+    width: 150px;
+}
+
+#div1{
+    width: 350px;
+    margin: 25px auto;
+    text-align: center;
+    background: rgb(12, 75, 75);
+    padding: 15px;
+    border-radius: 25px
+}
+
+input{
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: black rgba(0, 0, .20);
+    outline-color: whitesmoke;
+}
+
+button{
+margin: 15px;
+width: 130px 90px;
+font-size: 25px;
+border-radius: 90px;
+color: black;
+text-shadow: rgb(20, 45, 117);
+cursor: pointer;
+outline: none;
+}
+
+p{
+    color: white;
+    font-size: 28px;
+}
+
+
+#div4{
+    padding: 3px;
+    background-color: rgb(138, 42, 42)
+}
+p.resultado{
+    color: white;
+    font-size: 32px;
+
+}

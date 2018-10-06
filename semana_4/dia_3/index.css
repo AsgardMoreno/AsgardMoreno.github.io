@@ -4,10 +4,14 @@
 
 
 body, input {
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Lato', sans-serif;
     color: black
 }
 
+header{
+    text-align: center
+
+}
 body{
     margin: 0;
     background: rgba(134, 98, 98, 0.712)
@@ -50,4 +54,5 @@ button{
     height: 69px;
     margin: 7.8px;
     font-size: 34px;
+    border-radius: 20px
 }

@@ -10,35 +10,21 @@ body, input{
     margin: 20px 90px;
     shape-margin: 10%;
     border: 20px;
-    background-color: white;
-    padding: 1%
+    background-color: rgba(215, 215, 215, 0.536);
+    padding: 1%;
+    position: absolute;
+    
     
 }
 
 #fondo{
-   width: 90%;
-   opacity: 0.9;
+   
+    width:80%;
+    display: inline-flex;
 }
 
-#backgroundImage{z-index: 1;}
-
-#backgroundImage:before {
-    content:"Fondo4" ;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url("Fondo1");
-     background-repeat: repeat;
-     background-size: 100%;
-     opacity: 0.9;
-     filter:alpha(opacity=30);
-     width:100%;
-  } 
-
 #todo{
+
     margin: 10px 80px;
     background-color: #cac8c4cf
 }
@@ -52,7 +38,7 @@ header{
 }
 
 #contenedor{
-    width: 400px;
+    width: px;
     margin: -20px -15px;
 }
 
@@ -64,8 +50,9 @@ img{
     border-style: solid;
     border-radius: 10px;
     border-image-width: 5px;
-    margin: -48px 260px 10px;
+    margin: -40px 140px 10px;
 }
+
 
 #cuadro{
     width: 30px;
@@ -80,8 +67,9 @@ h1{
 }
 
 #contenedor2{
-    width: 350px;
+    width: 320px;
     margin: 30px 80px;
+    vertical-align: 3px;
     
 }
 
@@ -93,10 +81,19 @@ h2{
     font-size: 28px
 }
 
+h3{
+    background: rgb(48, 165, 238);
+    margin: 10px -96px;
+    text-align: center;
+    padding-right: 121px;
+    font-size: 28px
+}
+
 a:hover, a.shad{
     color: rgba(21, 21, 182, 0.705);
     text-shadow: yellowgreen;
-    cursor: pointer
+    cursor: pointer;
+    
 }
 
 ul.sem1, a{

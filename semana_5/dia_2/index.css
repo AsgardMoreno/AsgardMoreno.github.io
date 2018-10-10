@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    background: black;
+}
+
+div {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background: #ff4bf9;
+    transition: .9
+}
+
+.chico {
+    width: 150px;
+    height: 150px;
+    background: #32b1db;
+    transition: .3s
+}
+
+.grande {
+    width: 250px;
+    height: 250px;
+    background: #fff04b;
+    transition: .6s
+}
+
+/*
+  transition: all 1s;
+    - con esta propiedad podrás hacer
+      que cuando cambie la propiedad de
+      un elemento se realice con animación
+      en lugar de que sea instantaneo
+*/

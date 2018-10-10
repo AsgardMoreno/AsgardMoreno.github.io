@@ -49,38 +49,32 @@ miBoton.addEventListener('click', function() {
 //cuando el usuario presione un boton
 //checara si la contraseña es cprrecta.
 //mostrar el resultado en otro input
-
-
-let miInput2 = document.querySelector ('input.me')
-let cab2 = document.querySelector ('h2');
-
-let miboton3 = document.querySelector ('button.con')
-
-let innp = document.querySelector ('input')
-
-
-function inP1(){
-    let contraN = miInput2.value
-    counter = 3
-    if (contraN === '12345'){
-        innp.value = "Contraseña Correcta, Acceso Permitido"
-    }
-    else{
-        let contraN = miInput2.value
-        innp.value = "Contraseña incorrecta"
-        while ((contraN !== '12345') && (counter > 0)){
-                miInput2.value = ""
-                counter = counter - 1;
-                cab2.innerText = "Tienes " + counter + " intentos más";
-                if (counter = 0){
-                cab2.innerText = "Cuenta Bancaria Bloqueada";
-                cab2 = document.querySelector('input.me[placeholder="disabled"]')
-                }
-         }
-    }
-}
-miboton3.addEventListener('click', inP1)
-
-
 //Poner numero de intentos, al 3 intento que muestre que ya 
 //no puede seguir, que lo muestre en head
+
+
+let contraValue = document.querySelector ('input.me').value;
+let cab2 = document.querySelector ('h2');
+
+let miboton3 = document.querySelector ('button.con');
+
+const contraUser = '12345';
+let counter = 3;
+
+function contrasena(){
+    if (contraValue === contraUser){
+        cab2.innerText = "Acceso Permitido"
+        contraValue = document.querySelector('input.me[placeholder="disabled"]');
+    }
+    else{ 
+        contraValue.innerText = "";
+        counter = counter - 1;
+        cab2.innerText = "Tienes " + counter + " intentos más";  
+        if (counter = 0){
+            cab2.innerText = "Cuenta Bancaria Bloqueada";
+            contraValue = document.querySelector('input.me[placeholder="disabled"]');  
+        } 
+    }
+} 
+
+miboton3.addEventListener('click', contrasena)

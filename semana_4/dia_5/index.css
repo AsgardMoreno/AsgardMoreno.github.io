@@ -10,6 +10,7 @@ body, input {
 header{
     text-align: center;
     font-size: 36px;
+    
 }
 img{
     width: 150px;
@@ -25,13 +26,21 @@ img{
 }
 
 input{
-    padding: 5px 10px;
+    padding: 5px 20px;
     margin: 10px 0;
     font-size: 20px;
+    text-align: center;
     border-width: 4px;
     border-style: solid;
     border-color: black rgba(0, 0, .20);
     outline-color: whitesmoke;
+}
+
+span{
+    font-size: 18px;
+    color: white;
+    
+    text-align: right;
 }
 
 button{
@@ -44,6 +53,19 @@ text-shadow: rgb(20, 45, 117);
 cursor: pointer;
 outline: none;
 }
+
+button.reset{
+    margin: 15px;
+    width: 100px 75px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    }
 
 p{
     color: white;

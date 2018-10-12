@@ -1,0 +1,132 @@
+ *{
+    box-sizing:border-box;
+}
+
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor{
+height:100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+
+#contenedorCentro{
+    margin-bottom: 100px;
+}
+
+.ImgDiv{
+    padding: 30px;
+}
+.SearchDiv{
+    padding: 0px;
+}
+.botones{
+    padding: 20px;
+}
+
+#InSearch{
+    width: 483px;
+    font-size: 15px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgba(177, 173, 173, 0.447);
+    border-width: .5px;
+    padding: 14px;
+    box-shadow: -1px 3px 2px 1px  rgba(38, 37, 37, 0.1);
+    display: flex;
+    flex-grow: 1;
+    outline: none;
+}
+
+button{
+    width: 136px;
+    height: 36px;
+    border-style: none;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 13px;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: rgba(242, 240, 240, 0.988);
+    color: gray;
+    padding:1px;      
+    margin-top: 12px;
+    margin-right: 4px;
+}
+
+#foot{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.foot1{
+    width: 100%;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px;
+    color: rgba(65, 65, 65, 0.845);
+    border-color: rgba(167, 167, 167, 0.879);
+    background: rgba(223, 222, 222, 0.4);
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.foot2{
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+    
+    padding: 5px;
+    color: rgba(65, 65, 65, 0.845);
+    border-color: rgba(167, 167, 167, 0.879);
+    background: rgba(223, 222, 222, 0.4);
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center
+    
+    
+}
+
+.foot3{
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+   
+    padding: 12px;
+    color: rgba(65, 65, 65, 0.845);
+    margin-left: auto;
+
+    
+   
+}
+
+.span0{
+    padding: 1px;
+    margin-left: 30px;
+    font-size: 16px;
+    color: rgba(167, 167, 167, 0.879);
+    font-family: Arial;
+    font-style: normal;
+}
+.span1{
+    padding: 10px;
+    margin-left: 21px;
+}

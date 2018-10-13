@@ -2,7 +2,7 @@ let searchInput = document.querySelector('input.S')
 let searchButton = document.querySelector('#search')
 
 function validar(event){
-if(searchInput.value.match(/^ +$/)){ //^ inicio de cadena, $ fin de cadena, "espacio y +", que haya un espacio o mas
+    if( searchInput.value.match(/^ +$/) || searchInput.value.match(/^$/) ){ //^ inicio de cadena, $ fin de cadena, "espacio y +", que haya un espacio o mas
 event.defaultPrevented;
 return false;
     }

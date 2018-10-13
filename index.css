@@ -5,8 +5,10 @@
 }
 
 body, input{
+    height: 100vh;
     font-family: 'Slabo 27px', serif;
     display:block;
+    
     font-weight: bolder;
     margin: 20px 90px;
     shape-margin: 10%;

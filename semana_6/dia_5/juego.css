@@ -1,0 +1,314 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 9px;
+    border-style: double;
+    border-color: black;
+    background: url("fondo1.jpg");
+    background-size: cover;
+    padding-top: 106px;
+    align-items: center;    
+}
+
+@media all and (max-width: 425px) {
+   body{
+       height: cover;
+       
+   }
+   .instruccionesdiv{
+    
+    font-size: 12px;    
+   }
+   img.piedra, img.pajaro, img.agua, img.piedra, img.pajaro, img.agua{
+       width: 15%;
+       height: auto;
+   }
+   
+}
+
+.head{
+    font-size: 42px;
+    font-family: 'Alegreya SC', serif;
+    top: 0;
+    left:0;
+    right:0;
+    position: absolute;
+
+    flex-direction: column;
+    text-align: center;
+
+}
+h1{
+    font-size: 18px;
+    padding:-1px;;
+    margin-top:-2px;
+    margin-bottom:-2px;
+}
+
+header{
+    font-family: 'Alegreya SC', serif;
+    font-size: 52px;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(0, 0, 0);   
+    
+}
+.reiniciar{
+    align-self: flex-end;
+    margin-right: 30px;
+    height: 90px;
+}
+.marcador{
+    padding: 2px;
+    font-size: 32px;
+    color: rgb(232, 218, 62);
+    background-color: rgb(0, 0, 0); 
+    height: 42px;  
+    text-align: center;
+  
+}
+
+.victorias{
+    margin-right: 50px;
+    
+    
+}
+.ganando{
+    font-size: 36px;
+    color:rgb(37, 182, 37);
+}
+
+.perdiendo{
+    font-size: 36px;
+    color: rgb(255, 142, 81);
+}
+
+
+span{
+    margin-left: 80px;
+}
+
+#imagenes{
+    position:relative;
+    left:40px;
+}
+#imagenes1{
+    
+    align-items: baseline;
+    flex-direction: row;
+     
+}
+
+
+.pajaro{
+    width: 100px;
+    height: 100px;
+    cursor: pointer; 
+    transition: .3s;
+    padding: 5px;
+}
+
+
+.agua{
+   
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px;
+}
+
+
+.piedra{
+   
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px;
+    
+}
+
+
+
+.pajaro2{
+    width: 100px;
+    height: 100px;
+    cursor: pointer; 
+    transition: .3s;
+    padding: 5px;
+}
+
+
+.agua2{
+   
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px;
+}
+
+
+.piedra2{
+  
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px; 
+   
+}
+
+.piedra:hover, .agua:hover, .pajaro:hover{
+border-color: rgb(165, 12, 12);
+border-style: solid;
+border-width: 8px;
+border-radius: 50%;
+
+padding: 8px;
+
+}
+
+.selectpersonaje{
+    border-color: rgb(10, 1, 109);
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    transform: scale(1.1)
+}
+
+
+.selectboton{
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+
+    padding:3px;
+    outline: none;
+    transform:scale(1.05);
+    
+}
+
+.resultado{
+    text-align: right;
+    text-justify: distribute;
+    font-family: 'Mirza', cursive;
+    font-size:48px;
+    color: chocolate;
+}
+
+
+#botones{
+    display: flex;
+    padding-top: 50px;
+    align-self: flex-start;
+    padding-left: 50px;
+
+   
+}
+.vsComp{
+    margin-right: 50px;
+    height: 90px;
+}
+.vsHum{
+    height: 90px;
+
+}
+
+#jugar{
+    position: relative;
+    width: 112px;
+    left: 120px;
+    top: 40px;
+    right:50px;
+}
+
+button:hover{
+    border-color: rgb(208, 194, 38);
+    border-style: solid;
+    border-radius: 50%;
+
+    padding: 8px;
+}
+
+.instruccionesdiv{
+    
+    width: 15em;
+    height: 12em;
+    padding: 3px;
+    position: fixed;
+    top: 200px;
+    align-self: flex-start;
+    justify-content: safe; 
+   
+    margin-left:30px;
+    
+}
+
+label{
+    text-align: left;
+    text-justify: distribute;
+    font-family: 'Mirza', cursive;
+    font-size: 22px;
+}
+
+.instrucciones{
+    text-align: left;
+    text-justify: distribute;
+    font-family: 'Mirza', cursive;
+    font-size: 23px;
+}
+
+input{
+    border: none;
+    outline: none;
+    font-size: 28px;
+    background-color: none;
+    width: 1em;
+
+}
+
+p{
+    margin-left: 15px;
+}
+
+#imagenes2{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.piedra2:hover, .agua2:hover, .pajaro2:hover{
+border-color: rgb(165, 12, 12);
+border-style: solid;
+border-width: 8px;
+border-radius: 50%;
+
+padding: 8px;
+
+}
+
+.span1{
+    color: rgb(0, 0, 0);
+    margin-left: -20px;
+    padding: 10px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 22px;  
+}
+
+.span2{
+    color: rgb(148, 72, 30);
+    margin-left: -20px;
+    padding: 10px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 22px;  
+}

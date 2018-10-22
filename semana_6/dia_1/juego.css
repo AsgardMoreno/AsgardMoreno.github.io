@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    border: 9px;
+    border-style: double;
+    border-color: black;
+    
+}
+
+.head{
+    font-size: 42;
+    font-family: 'Cinzel', serif;
+    width: 100%;
+    left:0;
+    right:0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+header{
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    color: red;
+
+    background-color: rgb(0, 0, 0);   
+    
+}
+
+.marcador{
+    width: 60%;
+    height: 40px;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    font-size: 32px;
+    color: rgb(238, 255, 0);
+    background-color: rgb(0, 0, 0); 
+    border-color: blue; 
+    border-style: dotted;
+}
+span{
+    margin-left: 80px;
+}
+
+#imagenes{
+    width: 600px;
+    height: 600px;
+    
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center space-around;
+    
+}
+.flechasdiv{
+    position: fixed;
+    display: flex; 
+    justify-content: center;
+    align-self: center;
+   
+}
+.flechas{
+    border-radius: 50%;
+    
+    
+}
+
+.paperdiv{
+    display: flex;
+    align-self: flex-end;
+}
+.paper{
+    width: 150px;
+    margin-left:80px;
+}
+
+.scissorsdiv{
+    display: flex;
+    align-self: flex-start;
+}
+.scissors{
+    margin-top:180px;
+    margin-left: 70px;
+    width: 130px;
+}
+
+.golemdiv{
+    display: flex;
+    align-self: center;
+}
+.golem{
+    width: 150px;
+
+}
+
+button{
+    width: 120px;
+    height: 120px;
+    padding:10px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 5px;
+    background-color: brown;
+    color: whitesmoke;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    font-size: 16px;
+
+}
+
+#botones{
+    display:flex;
+    right: 80px;
+    top: 20%;
+    position:absolute;
+    justify-content:flex-end;
+   
+    flex-direction: column; 
+    
+}

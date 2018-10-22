@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="juego.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Cinzel+Decorative|Mirza" rel="stylesheet">
+    <title>Piedra papel o tijera</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+    
+</head>
+<body>
+    
+    <div class="head" >
+        <div> <header>Piedra - Pajaro - Agua</header> </div>
+        <h1>Piedra - Papel - Tijeras</h1>
+        <div class="marcador"><span>-VICTORIAS-></span>  <span class="victorias"></span><span>-DERROTAS-></span>  <span class="derrotas"></span></div> 
+    </div>
+
+    <img src = "reiniciarO.png" class="reiniciar">
+
+    <div id="imagenes">
+        <div id="imagenes1"></div>
+        <span class="span1">Jugador 1</span>
+         <img src="piedraOrigami.png" class="piedra" id="piedra" onClick="setOpcion(1,0)"> 
+         <img src="pajaroOrigami.png" class="pajaro" id="pajaro" onClick="setOpcion(1,1)"> 
+         <img src="aguaorigami.png" class="agua" id="agua" onClick="setOpcion(1,2)"> 
+         
+        <hr />
+         <div id="imagenes2">
+         <img src="piedraOrigami.png" class="piedra2" id="piedra2" onClick="setOpcion(2,0)"> 
+         <img src="pajaroOrigami.png" class="pajaro2" id="pajaro2" onClick="setOpcion(2,1)"> 
+         <img src="aguaorigami.png" class="agua2" id="agua2" onClick="setOpcion(2,2)"> 
+         <span class = "span2">Jugador 2</span>
+        </div>
+        <img src="jugarO.png" id="jugar">
+    </div>
+
+    <div class="instruccionesdiv"><label>Que hacer: <input> </label>
+        <p class="instrucciones"> Selecciona el MODO de juego y si es contra la computadora o un humano,o elige tu personaje para jugar directamente contra la computadora </p>
+    </div>
+    
+
+    <div id="botones">
+        <img src="vsCompuO.png" class="vsComp selectboton" onclick="setModo('compu')"> 
+        <img src="1vs1O.png" class="vsHum" onclick="setModo('humano')">
+    </div>
+    <script src='juego.js'> </script>
+</body>
+</html>

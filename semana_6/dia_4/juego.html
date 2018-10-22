@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="juego.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Cinzel+Decorative|Mirza" rel="stylesheet">
+    <title>Piedra papel o tijera</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
+    
+</head>
+<body>
+    
+    <div class="head" >
+        <div> <header>Piedra - Pajaro - Agua</header> </div>
+        <h1>Piedra - Papel - Tijeras</h1>
+        <div class="marcador"> -Marcador-  </div> 
+    </div>
+
+
+    <div id="imagenes">
+         <img src="roca2.png" class="piedra" id="piedra"> 
+         <img src="ave2.png" class="pajaro" id="pajaro"> 
+         <img src="agua2.png" class="agua" id="agua"> 
+        <button id="jugar">Jugar</button>
+    </div>
+
+    <div class="instruccionesdiv"><label>Que hacer: <input autofocus > </label>
+        <p class="instrucciones"> Selecciona el MODO de juego y si es contra la computadora o un humano </p>
+    </div>
+    
+
+    <div id="botones">
+        <button class="vsComp"><i class="fas fa-laptop-code"></i> VS <i class="fas fa-child"></i></button>
+        <button class="vsHum"><i class="fas fa-child"></i> VS <i class="fas fa-child"></i></button>
+        <button>MODO</button>
+    </div>
+    <script src='juego.js'> </script>
+</body>
+</html>

@@ -18,7 +18,7 @@
     <div class="head" >
         <div> <header>Piedra - Pajaro - Agua</header> </div>
         <h1>Piedra - Papel - Tijeras</h1>
-        <div class="marcador"><span>-VICTORIAS-></span>  <span class="victorias"></span><span>-DERROTAS-></span>  <span class="derrotas"></span></div> 
+        <div class="marcador"><span class="jug1"></span>  <span class="victorias"></span>  <span class="jug2"></span>  <span class="derrotas"> </span></div> 
     </div>
 
     <img src = "reiniciarO.png" class="reiniciar">
@@ -26,15 +26,15 @@
     <div id="imagenes">
         <div id="imagenes1"></div>
         <span class="span1">Jugador 1</span>
-         <img src="piedraOrigami.png" class="piedra" id="piedra" onClick="setOpcion(1,0)"> 
-         <img src="pajaroOrigami.png" class="pajaro" id="pajaro" onClick="setOpcion(1,1)"> 
-         <img src="aguaorigami.png" class="agua" id="agua" onClick="setOpcion(1,2)"> 
+         <img src="piedraOrigami.png" class="piedra" id="piedra" > 
+         <img src="pajaroOrigami.png" class="pajaro" id="pajaro" > 
+         <img src="aguaorigami.png" class="agua" id="agua" > 
          
         <hr />
          <div id="imagenes2">
-         <img src="piedraOrigami.png" class="piedra2" id="piedra2" onClick="setOpcion(2,0)"> 
-         <img src="pajaroOrigami.png" class="pajaro2" id="pajaro2" onClick="setOpcion(2,1)"> 
-         <img src="aguaorigami.png" class="agua2" id="agua2" onClick="setOpcion(2,2)"> 
+         <img src="piedraOrigami.png" class="piedra2" id="piedra2" > 
+         <img src="pajaroOrigami.png" class="pajaro2" id="pajaro2" > 
+         <img src="aguaorigami.png" class="agua2" id="agua2" > 
          <span class = "span2">Jugador 2</span>
         </div>
         <img src="jugarO.png" id="jugar">
@@ -46,8 +46,8 @@
     
 
     <div id="botones">
-        <img src="vsCompuO.png" class="vsComp selectboton" onclick="setModo('compu')"> 
-        <img src="1vs1O.png" class="vsHum" onclick="setModo('humano')">
+        <img src="vsCompuO.png" class="vsComp" > 
+        <img src="1vs1O.png" class="vsHum" >
     </div>
     <script src='juego.js'> </script>
 </body>

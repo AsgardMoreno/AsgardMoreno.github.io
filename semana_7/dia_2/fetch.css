@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  background: url(fondomeeseek.jpg) 100%;
+  background: linear-gradient(black, white);
+  height: 100%;
+  padding:-10px;
+  background: #EEE;
+  color: #333;
+}

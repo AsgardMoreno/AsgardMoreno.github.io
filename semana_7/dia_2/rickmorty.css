@@ -1,0 +1,9 @@
+body {
+  height: 100vh;  
+  display: flex;
+  background: url("fondomeeseek.jpg");
+  background-size:cover;
+
+  padding:-10px;
+
+}

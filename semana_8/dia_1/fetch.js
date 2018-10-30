@@ -17,19 +17,21 @@
 
 let respuesta = function(res) {
   console.log(res);
-//   document.body.innerHTML +=
-//     `
-//       <div>
-//         <img src="${res.results[0].image}">
-//         <div>${res.results[0].name}</div>
-//       </div>
-//       <div>
-//       <img src="${res.results[11].image}">
-//       <div>${res.results[10].name} - ${res.results[10].type} - ${res.results[10].status}</div>
-//       </div>
+  let personajes = Array(20);
+  
+  document.body.innerHTML +=
+    `
+      <div>
+        <img src="${res.results[0].image}">
+        <div>${res.results[0].name}</div>
+      </div>
+      <div>
+      <img src="${res.results[11].image}">
+      <div>${res.results[10].name} - ${res.results[10].type} - ${res.results[10].status}</div>
+      </div>
       
       
-//       `
+      `
 }
 
 fetch("https://rickandmortyapi.com/api/character/?page=1")

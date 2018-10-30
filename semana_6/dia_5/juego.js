@@ -57,24 +57,28 @@ function personaje1(){
   pajaro.classList.remove('selectpersonaje');
   agua.classList.remove('selectpersonaje');
   event.target.classList.add('selectpersonaje');
-  console.log('boton vs comp/hum seleccionado = ' + event.target.classList.contains('selectpersonaje'))
+  
   console.log('seleccion de jugador1 = ' + avatar1)
+  console.log('avatar1 seleccionado? '+ event.target.classList.contains('selectpersonaje') );
+
 }
 
 function personaje2(){
   piedra.removeEventListener('click', personaje1);
   pajaro.removeEventListener('click', personaje1);
   agua.removeEventListener('click', personaje1);
+
   piedra.classList.remove('selectpersonaje');
   pajaro.classList.remove('selectpersonaje');
   agua.classList.remove('selectpersonaje');
+
   avatar2 = event.target.getAttribute('id');
   piedra2.classList.remove('selectpersonaje');
   pajaro2.classList.remove('selectpersonaje');
   agua2.classList.remove('selectpersonaje');
   event.target.classList.add('selectpersonaje');
-  console.log('boton vs comp/hum seleccionado = ' + event.target.classList.contains('selectpersonaje'))
-  console.log('seleccion de jugador1 = ' + avatar2)
+  console.log('avatar2 seleccionado??  ' + event.target.classList.contains('selectpersonaje'));
+  console.log('seleccion de jugador2?? ' + event.target.classList.contains('selectpersonaje') );
 } 
 
 //Anula la seleccion de personajes antes de seleccionar numero de jugadores
@@ -102,7 +106,7 @@ function botonComp(){
   instrucciones.innerText = "Selecciona tu personaje";
   botonVsHum.classList.remove('selectboton');
   event.target.classList.add('selectboton');
-  console.log(botonVsComp.classList.contains ('selectboton'))
+  console.log('botonVsComp?? '+ botonVsComp.classList.contains ('selectboton'))
   //activar seleccion de personaje1 y compu ya que se activo el boton vsComp
   piedra.addEventListener('click', personaje1);
   pajaro.addEventListener('click', personaje1);
@@ -123,28 +127,18 @@ function botonHum(){
   instrucciones.innerText = "Primero elige jugador1, despues jugador 2, DESPUES PRESIONA JUGAR!";
   botonVsComp.classList.remove('selectboton');
   event.target.classList.add('selectboton');
-  console.log(botonVsHum.classList.contains ('selectboton'))
+  console.log('botonVsHum?? ' + botonVsHum.classList.contains ('selectboton'))
   //activar seleccion de personaje1 
   piedra.addEventListener('click', personaje1);
   pajaro.addEventListener('click', personaje1);
   agua.addEventListener('click', personaje1); 
   // jugador 2 se activa despues de la seleccion de jugador1
-  piedra2.removeEventListener('click', personaje2);
-  pajaro2.removeEventListener('click', personaje2);
-  agua2.removeEventListener('click', personaje2);
+
   
-  piedra2.classList.add('noSelect');
-  pajaro2.classList.add('noSelect');
-  agua2.classList.add('noSelect');
+  divImg2.classList.add('.mascara');
+  jugar.removeEventListener('click', VsHum); 
 
-  divImg2.classList.add('#mascara', '.mascara');
-
-  jugar.removeEventListener('click', vsHum); 
-
-  if( (piedra || agua || pajaro).contains('selectboton') ){
-    piedra.removeEventListener('click', personaje1);
-    pajaro.removeEventListener('click', personaje1);
-    agua.removeEventListener('click', personaje1);
+  if( event.target.classList.contains('selectpersonaje') && (avatar1 = (piedra || agua || pajaro) ) ){
     personaje2();
     divImg1.classList.add('#mascara', '.mascara');
   }
@@ -216,6 +210,7 @@ function VsComp(){
 jugar.addEventListener('click', VsComp);
 
 function VsHum(){
+  if (avatar2.classList.contains('selectpersonaje') && botonVsHum.classList.contains('selectboton')){
   
     instrucciones.classList.remove('instrucciones');
     instrucciones.classList.add('resultado');
@@ -251,7 +246,7 @@ function VsHum(){
       document.querySelector('.victorias').classList.add('ganando');
     }
   }
-
+}
 
 
 

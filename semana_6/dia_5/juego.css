@@ -291,7 +291,7 @@ p{
     display: flex;
     flex-direction: row;
 }
-#mascara .mascara{
+.mascara{
     clip-path: circle(3px at center);
 } 
 

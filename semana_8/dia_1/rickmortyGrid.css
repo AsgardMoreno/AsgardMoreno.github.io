@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+  height: 102vh;
+  background: url("fondomeeseek.jpg");
+  background-size:cover;
+  margin: -2;
+
+ 
+}
+
+@media all and (max-width: 425px){
+    body{
+        background: url("fondomeeseekV.png") ;
+        background-size:40%;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-color: rgb(248, 148, 29, 1);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+.DivR{
+    right:0;
+    margin-top:200px;;
+
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display:flex;
+    
+    flex-wrap: wrap;
+    
+    }
+    .DivL{
+        display: flex;
+        flex-direction: row;
+        left:0;
+        width: 100%;
+        height: 50%;
+    }
+    .dialogo{
+        width: 130px;
+        margin-top: 100px;
+        margin-left: 100px;
+         
+    }
+    
+    .infoTexto{
+        
+        margin-top: 100px;
+        margin-left: 100px;
+        height: 180px;
+        width: 160px;
+        color: aliceblue;
+        font-family: 'Mali', cursive;
+        font-size: 1.em;
+        display: flex;  
+    }
+}
+
+.divisor{
+    height: 100vh;
+
+  
+}
+.button{
+    top: 169px;
+    left: 97px;
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.justask{
+    top: 156px;
+    left: 87px;
+    height: 120px;
+    
+    position:absolute;
+}
+
+.filtro{
+    top: 200px;
+    left: 220px;
+    height: 40px;
+    background-color: transparent;
+    font-family: 'Mali', cursive;
+    font-size: .85em;
+    width: auto;
+    position:absolute;
+    border: 1px rgb(0, 153, 255) solid;
+   
+}
+
+
+
+.logo{
+    height: 140px;
+    margin-left: 125px;
+}
+
+.DivL{
+    left:0;
+    height: 100%;
+    width: 55%;
+   
+}
+
+.DivR{
+    right:85px;
+    top:22px;
+
+    bottom:10px;
+    width: 45%;
+    position: fixed;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 232px);
+    
+    grid-gap: 6px;
+    justify-content: center;
+
+}
+
+
+.pImg{
+    
+    border: 8px solid;
+    border-color: black;
+    background-color: blanchedalmond;
+    padding: 3px;
+    
+    font-family: 'Mali', cursive;  
+    font-size: 1.05em;
+    font-weight: bolder;
+    
+    width: auto; 
+}
+
+.person{
+    height: 210px;  
+}
+
+.dialogo{
+    width: 270px;
+    left: 330px;
+    top: 220px;
+    position: absolute;
+     
+}
+
+.infoTexto{
+    top: 230px;
+    left: 420px;
+    height: 170px;
+    width: 160px;
+    color: rgb(0, 0, 0);
+    font-family: 'Mali', cursive;
+    font-size: 1.3em;
+    font-weight: bolder;
+    position: absolute;
+}
+
+.divFlechas{
+    width: 90px;
+    height: 340px;
+    right:20px;
+    margin-right: 30px;
+    top:200px;
+    position: absolute;
+    text-justify: auto;
+    
+}
+
+.flechas{
+    
+    width: 50px;
+    margin:15px;
+    padding: 2px;
+    cursor: pointer; 
+}
+.flechasmid{
+    
+    width: 90px;
+    margin:5px;
+    padding: 2px;
+    cursor: pointer; 
+}
+
+
+.flechas:hover{
+    outline: 3px groove rgba(0, 0, 255, 0.247);
+    
+}
+
+.activo{
+    
+    border: rgb(42, 165, 83) 2px solid;
+}
+

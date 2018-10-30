@@ -26,7 +26,7 @@ body{
 }
 
 header{
-    font-size: 42px;
+    font-size: 34px;
     text-align: center;
     padding:2px;
     background: rgb(230, 89, 89);
@@ -41,8 +41,7 @@ header{
   
 }
 
-img{
-    
+img{ 
     display: block;
     width: 200px;
     background: black;
@@ -63,48 +62,32 @@ img{
 
 h1{
     font-family: 'Josefin Sans', sans-serif;
-    background-color: rgba(248, 145, 0, 0.87)
+    background-color: rgba(248, 145, 0, 0.87);
+    font-size: 1.5em;
 }
 
 #semanas{
     display: flex;
     flex-flow: row wrap;
     align-items:baseline center;
-    justify-content: center;
-    
-    
+    justify-content: left;
+    margin-bottom: 2px;
 }
+
+
 
 .hrflex{
     display: flex;
-    margin:10%
+    margin:5%
 }
 
-.divsemana1{
-    display: flex;
-    padding: 5px;
-    align-self: flex-start
-    
-}
-
-.divsemana2{    
-    display: flex;
-    padding: 5px;
-   align-self: flex-end
-}
-
-.divsemana3{
-    display: flex;
-    padding: 5px;
-    align-self: flex-start
-    
-}
-
-h2, h3, h4{
+h2{
     background: rgb(48, 165, 238);
     text-align: center;
     padding-left: 15px;
-    font-size: 27px
+    font-size: 24px;
+    width: 290px;
+    height: auto;
 
 }
 
@@ -119,7 +102,7 @@ ul.sem1, a{
     font-weight: bold;
     color: rgb(23, 1, 1);
     text-decoration-line: unset;
-    font-size:24px;
+    font-size:20px;
     
 }
 

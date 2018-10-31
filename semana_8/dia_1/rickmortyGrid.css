@@ -3,63 +3,11 @@
 }
 
 body {
-  height: 102vh;
-  background: url("fondomeeseek.jpg");
-  background-size:cover;
-  margin: -2;
-
- 
-}
-
-@media all and (max-width: 425px){
-    body{
-        background: url("fondomeeseekV.png") ;
-        background-size:40%;
-        background-position: bottom left;
-        background-repeat: no-repeat;
-        background-color: rgb(248, 148, 29, 1);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-.DivR{
-    right:0;
-    margin-top:200px;;
-
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    display:flex;
-    
-    flex-wrap: wrap;
-    
-    }
-    .DivL{
-        display: flex;
-        flex-direction: row;
-        left:0;
-        width: 100%;
-        height: 50%;
-    }
-    .dialogo{
-        width: 130px;
-        margin-top: 100px;
-        margin-left: 100px;
-         
-    }
-    
-    .infoTexto{
-        
-        margin-top: 100px;
-        margin-left: 100px;
-        height: 180px;
-        width: 160px;
-        color: aliceblue;
-        font-family: 'Mali', cursive;
-        font-size: 1.em;
-        display: flex;  
-    }
+    height: 102vh;
+    background: url("fondomeeseek.jpg");
+    background-size:cover;
+    margin: -2;
+  
 }
 
 .divisor{
@@ -170,11 +118,11 @@ body {
 .divFlechas{
     width: 90px;
     height: 340px;
-    right:20px;
+    right:10px;
     margin-right: 30px;
     top:200px;
     position: absolute;
-    text-justify: auto;
+    
     
 }
 
@@ -204,3 +152,165 @@ body {
     border: rgb(42, 165, 83) 2px solid;
 }
 
+@media all and (max-width: 1240px){
+    .DivR{
+        grid-template-columns: repeat(2, 170px);
+        grid-gap: 6px;
+        right:50px;
+    
+    }
+    .pImg{ 
+        font-size: .87em;
+        font-weight: bolder;
+        width: 170px; 
+    }
+    .person{
+        height: 150px;
+    }
+    .flechas{
+        height:30px
+    }
+    .flechasmid{
+        width:60px;
+    }
+    .divFlechas{
+        margin-right:0;
+    }
+}
+@media all and (max-width: 856px){
+    body{
+        height: 100vh;
+    }
+    .DivR{
+        width: 35%;
+        grid-template-columns: repeat(2, 130px);
+        grid-gap: 6px;
+        right:50px;
+    
+    }
+    .pImg{ 
+        border: 5px solid;
+        font-size: .85em;
+        font-weight: bolder;
+        width: 130px; 
+    }
+    .person{
+        height: 115px;
+    }
+    .flechas{
+        height:26px
+    }
+    .flechasmid{
+        width:50px;
+        margin-right: -8px;
+    }
+    .divFlechas{
+        margin-right:-40px;
+    }
+    .dialogo{
+        width: 200px;
+    }
+    .infoTexto{
+        font-size: .93em;
+        width: 130px;
+        left:390px;
+        top: 250px;
+    }
+}
+@media all and (max-width: 691px){
+    body{
+        height: 100vh;
+    }
+    .logo{
+        height: 120px;
+        margin-left: 60px;
+    }
+    .DivR{
+        width: 35%;
+        grid-template-columns: repeat(2, 115px);
+        grid-gap: 6px;
+        right:50px;
+    
+    }
+    .pImg{ 
+        border: 5px solid;
+        font-size: .85em;
+        font-weight: bolder;
+        width: 115px; 
+    }
+    .person{
+        height: 100px;
+    }
+    .flechas{
+        height:26px
+    }
+    .flechasmid{
+        width:42px;
+        margin-right: -2px;
+    }
+    .divFlechas{
+        margin-right:-40px;
+    }
+    .dialogo{
+        width: 0px;
+    }
+    .infoTexto{
+        font-size: 0em;
+        
+    }
+}
+@media all and (max-width: 510px){
+    body{
+        background: url("fondomeeseekV.png") ;
+        background-size:100%;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-color: rgb(248, 148, 29, 1);
+        height: 100vh;
+        
+    }
+
+    .logo{
+        width: 200px;
+    }
+    .filtro{
+        left: 60px;
+        top: 300px;
+    }
+
+    .DivR{
+        width: 35%;
+        grid-template-columns: repeat(2, 140px);
+        grid-gap: 6px;
+        right:50px;
+    
+    }
+    .pImg{ 
+        border: 5px solid;
+        font-size: .6em;
+        font-weight: bolder;
+        width: 130px; 
+    }
+    .person{
+        height: 100px;
+    }
+    .flechas{
+        height:26px
+    }
+    .flechasmid{
+        width:42px;
+        margin-right: -2px;
+    }
+    .divFlechas{
+        left:0;
+        flex-direction: row;
+    }
+    .dialogo{
+        width: 0px;
+    }
+    .infoTexto{
+        font-size: 0em;
+        
+    }
+    
+}

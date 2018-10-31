@@ -261,8 +261,9 @@ body {
 }
 @media all and (max-width: 510px){
     body{
+        
         background: url("fondomeeseekV.png") ;
-        background-size:100%;
+        background-size:120%;
         background-position: bottom left;
         background-repeat: no-repeat;
         background-color: rgb(248, 148, 29, 1);
@@ -272,6 +273,7 @@ body {
 
     .logo{
         width: 200px;
+        margin-left:30px;
     }
     .filtro{
         left: 60px;
@@ -279,10 +281,10 @@ body {
     }
 
     .DivR{
-        width: 35%;
-        grid-template-columns: repeat(2, 140px);
-        grid-gap: 6px;
-        right:50px;
+        width: 50%;
+        grid-template-columns: repeat(2, 130px);
+        grid-gap: 5px;
+        right: 10px;;
     
     }
     .pImg{ 
@@ -290,20 +292,35 @@ body {
         font-size: .6em;
         font-weight: bolder;
         width: 130px; 
+        
+
     }
     .person{
-        height: 100px;
+        height: 113px;
     }
     .flechas{
-        height:26px
+        height:26px;
+          
     }
     .flechasmid{
         width:42px;
-        margin-right: -2px;
+       
+        
+    }
+    .justask{
+        left:70px;
+    }
+    .filtro{
+        left:40px;
     }
     .divFlechas{
         left:0;
+        display: flex;
         flex-direction: row;
+        height: 50px;
+        margin-top:430px;
+        
+        
     }
     .dialogo{
         width: 0px;

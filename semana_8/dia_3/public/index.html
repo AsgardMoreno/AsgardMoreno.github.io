@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="prototipo1.css">
+  <title >Prototipo1 -FireBase- </title><img class="imagenfire" rel="stylesheet" src="https://www.joshmorony.com/wp-content/uploads/2016/11/firebase.png">
+</head>
+<body>
+  <h1>Fire!</h1>
+  <br />
+  <button class="sesion">Iniciar Sesion</button>
+  <button class="csesion">Cerrar Sesion</button>
+  
+  <div class="Usuarios">
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCJr38M8nH18yHzLs8QCylllTFk7yAlv1g",
+      authDomain: "prototipo-1-a9ded.firebaseapp.com",
+      databaseURL: "https://prototipo-1-a9ded.firebaseio.com",
+      projectId: "prototipo-1-a9ded",
+      storageBucket: "prototipo-1-a9ded.appspot.com",
+      messagingSenderId: "639597007637"
+    };
+    firebase.initializeApp(config);
+  </script>  
+<script src = "prototipo1.js">  </script>
+</body>
+</html>

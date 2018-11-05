@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: radial-gradient( antiquewhite 2%,gray 5%, white 3%, black 1%, white, gray 10%, white)
+
+}
+
+.sesion{
+    
+    background-color: rgb(14, 92, 180);
+    border-radius: 20px;
+    height: 40px;
+    width: 140px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.csesion{
+    
+    background-color: rgb(180, 103, 14);
+    border-radius: 20px;;
+    height: 40px;
+    width: 140px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.sesion:hover{
+    border: groove black 1px;
+    outline:none;
+    zoom: 1.05;
+    background-image: radial-gradient(rgba(0, 195, 255, 0.945) 50%, rgb(0, 110, 255) 80%)
+}
+.csesion:hover{
+    border: groove black 1px;
+    outline:none;
+    zoom: 1.05;
+    background-image: radial-gradient(rgba(0, 195, 255, 0.945) 50%, rgb(255, 145, 0) 80%)
+}
+
+.imagenfire{
+    width: 50px;
+}
+h2{
+    background-color: gray;
+    font-size: 24px;
+
+}
+h3{
+    background-color: red;
+    font-size: 18px;
+}
+.botonContador{
+    
+    background-color: rgb(163, 180, 14);
+    border-radius: 20px;;
+    height: 40px;
+    width: 140px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.botonContador:hover{
+    border: groove black 1px;
+    outline:none;
+   
+    zoom: 1.05;
+    background-image: radial-gradient(green 50%, white 80%)
+}
+
+.divContador{
+    margin-top: -98px;
+    margin-left: 43px;
+    display: flex;
+    font-size: 24px;
+    font-weight: bolder;   
+}
+
+.letrero{
+    height: 120px;;
+}

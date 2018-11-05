@@ -107,7 +107,7 @@ span{
     left:40px;
 }
 #imagenes1{
-    
+    display:flex;
     align-items: baseline;
     flex-direction: row;
      

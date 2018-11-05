@@ -34,7 +34,8 @@ function reset(){
   instrucciones.classList.add('instrucciones');
   instrucciones.classList.remove('resultado');
   instrucciones.innerText = "Selecciona el MODO de juego y si es contra la computadora o un humano,o elige tu personaje para jugar directamente contra la computadora";
- 
+  numeroGanadas=0;
+  numeroDerrotas=0;
   agua.classList.remove('selectpersonaje');
   pajaro.classList.remove('selectpersonaje');
   piedra.classList.remove('selectpersonaje');
@@ -47,8 +48,17 @@ function reset(){
   botonVsHum.classList.remove('selectboton');
   document.querySelector('.derrotas').innerText= defaultStatus;
   document.querySelector('.victorias').innerText= defaultStatus;
+  if( (! (botonVsComp.classList.contains('selectboton') ) ) || (! (botonVsHum.classList.contains('selectboton') ) ) )
+  {
+  piedra.removeEventListener('click', personaje1);
+  pajaro.removeEventListener('click', personaje1);
+  agua.removeEventListener('click', personaje1);
+  piedra2.removeEventListener('click', personaje2);
+  pajaro2.removeEventListener('click', personaje2);
+  agua2.removeEventListener('click', personaje2);
+  }
   
-  // evitarSeleccion();
+  
   
 }
 reiniciar.addEventListener('click', reset)
@@ -62,7 +72,23 @@ function personaje1(){
   
   console.log('seleccion de jugador1 = ' + avatar1)
   console.log('avatar1 seleccionado? '+ event.target.classList.contains('selectpersonaje') );
-  return avatar1
+  //Para cuando es de dos jugadores
+  if(botonVsHum.classList.contains('selectboton') && (event.target.classList.contains('selectpersonaje')==true)){
+    divImg1.classList.add('mascara');
+    divImg2.classList.remove('mascara');
+
+    piedra2.addEventListener('click', personaje2);
+    pajaro2.addEventListener('click', personaje2);
+    agua2.addEventListener('click', personaje2); 
+    if (avatar2 === piedra2 || agua2 || pajaro2){
+      jugar.addEventListener('click', vsHum);
+    }
+  }
+  if (botonVsComp.classList.contains ('selectboton') && avatar1 != null){
+  jugar.addEventListener('click', vsComp)
+  }
+  return (avatar1)
+
 }
 
 //Anula la seleccion de personajes antes de seleccionar numero de jugadores
@@ -83,6 +109,11 @@ let numeroGanadas=0;
 let numeroDerrotas=0;
 
 function botonComp(){
+  jugar.removeEventListener('click', vsHum)
+  reset()
+  instrucciones.classList.remove('resultado');
+  instrucciones.classList.add('instrucciones');
+
   divImg2.classList.remove('mascara');
   divImg1.classList.remove('mascara');
 
@@ -97,13 +128,18 @@ function botonComp(){
   piedra.addEventListener('click', personaje1);
   pajaro.addEventListener('click', personaje1);
   agua.addEventListener('click', personaje1); 
+  jugar.addEventListener('click', vsComp);
 }
+botonVsComp.addEventListener('click', botonComp)
 
 function botonHum(){
   reset()
+  jugar.removeEventListener('click', vsComp)
 
   juga1.innerText = "JUGADOR 1";
   juga2.innerText = "JUGADOR 2";
+  instrucciones.classList.remove('resultado');
+  instrucciones.classList.add('instrucciones');
 
   instrucciones.innerText = "Primero elige jugador1, despues jugador 2, DESPUES PRESIONA JUGAR!";
   botonVsComp.classList.remove('selectboton');
@@ -111,38 +147,32 @@ function botonHum(){
   console.log('botonVsHum?? ' + botonVsHum.classList.contains ('selectboton'))
   // jugador 2 se activa despues de la seleccion de jugador1
   divImg2.classList.add('mascara');
-  jugar.removeEventListener('click', VsHum); 
+  jugar.removeEventListener('click', vsHum); 
   //activar seleccion de personaje1 
-  personaje1()
+  piedra.addEventListener('click', personaje1);
+  pajaro.addEventListener('click', personaje1);
+  agua.addEventListener('click', personaje1); 
+
 }
 
-if (avatar1.classList.contains('selectpersonaje') || (botonVsHum.classList.contains('selectboton'))){
-    function personaje2(){
-    divImg1.classList.add('mascara');
-    piedra.removeEventListener('click', personaje1);
-    pajaro.removeEventListener('click', personaje1);
-    agua.removeEventListener('click', personaje1);
-  
-    piedra.classList.remove('selectpersonaje');
-    pajaro.classList.remove('selectpersonaje');
-    agua.classList.remove('selectpersonaje');
-  
-    avatar2 = event.target.getAttribute('id');
-    piedra2.classList.remove('selectpersonaje');
-    pajaro2.classList.remove('selectpersonaje');
-    agua2.classList.remove('selectpersonaje');
-    event.target.classList.add('selectpersonaje');
-    console.log('avatar2 seleccionado??  ' + event.target.classList.contains('selectpersonaje'));
-    console.log('seleccion de jugador2?? ' + event.target.classList.contains('selectpersonaje') );
-    return avatar2
-    }
-  } 
-  else{
-    botonHum()
+  function personaje2(){
+  avatar2 = event.target.getAttribute('id');
+  piedra2.classList.remove('selectpersonaje');
+  pajaro2.classList.remove('selectpersonaje');
+  agua2.classList.remove('selectpersonaje');
+  event.target.classList.add('selectpersonaje');
+  console.log('avatar2 seleccionado??  ' + event.target.classList.contains('selectpersonaje'));
+  console.log('seleccion de jugador2?? ' + event.target.classList.contains('selectpersonaje') );
+  if(botonVsHum.classList.contains('selectboton') && (event.target.classList.contains('selectpersonaje')==true)){
+    jugar.addEventListener('click', vsHum);
   }
+  return (avatar2)
+
+  }
+    
 
 botonVsHum.addEventListener('click', botonHum)
-botonVsComp.addEventListener('click', botonComp);
+
 
 function obtenerSeleccionCPU(opciones){
   let indice = Math.floor(Math.random() * opciones.length);
@@ -151,10 +181,11 @@ function obtenerSeleccionCPU(opciones){
 let compu = null;
 
 
-function VsComp(){
-  if (botonVsComp.classList.contains ('selectboton')){
+function vsComp(){
   let opciones = [piedra2, pajaro2, agua2];
   compu = obtenerSeleccionCPU(opciones);
+
+  if (botonVsComp.classList.contains ('selectboton') && avatar1 != null && compu != null){
   
   
   piedra2.classList.remove('selectpersonaje');
@@ -204,6 +235,7 @@ function VsComp(){
       document.querySelector('.victorias').classList.add('ganando');
     }
   }
+  avatar1 = null;
   setTimeout(function(){
   compu.classList.remove('selectpersonaje')
   piedra.classList.remove('selectpersonaje')
@@ -212,20 +244,20 @@ function VsComp(){
   }, 1500
   )
 }
-jugar.addEventListener('click', VsComp);
 
-function VsHum(){
-  if( event.target.classList.contains('selectpersonaje') && (avatar1 = (piedra || agua || pajaro) ) ){
-    personaje2();
-    divImg1.classList.add('#mascara', '.mascara');
-  }
-  if (avatar1.classList.contains('selectpersonaje') && botonVsHum.classList.contains('selectboton')){
-  
+
+
+
+function vsHum(){
+  if (botonVsHum.classList.contains ('selectboton') && avatar1 != null && avatar2 != null){
+
+    divImg1.classList.remove('mascara');
+ 
     instrucciones.classList.remove('instrucciones');
     instrucciones.classList.add('resultado');
     instrucciones.innerText = "EMPATE"; 
 
-    if (opcionavatar === avatar2){
+    if (avatar1 === avatar2){
         
       instrucciones.innerText = "EMPATE";
     }
@@ -255,18 +287,25 @@ function VsHum(){
       document.querySelector('.victorias').classList.add('ganando');
     }
   }
+  
+  avatar1 = null;
+  avatar2 = null;
+  
+
+  setTimeout(function(){
+
+    piedra.classList.remove('selectpersonaje')
+    pajaro.classList.remove('selectpersonaje')
+    agua.classList.remove('selectpersonaje')
+
+    piedra2.classList.remove('selectpersonaje')
+    pajaro2.classList.remove('selectpersonaje')
+    agua2.classList.remove('selectpersonaje')
+    divImg2.classList.add('mascara');
+
+    }, 2000
+    )
+    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

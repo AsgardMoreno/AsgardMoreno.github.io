@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Special Elite', cursive;
+    background-size: cover;
+    background-image: radial-gradient(white 1%, rgba(83, 154, 235, 0.658) 1%, white 5%, rgb(228, 241, 255) 10%, black 99.9% );
+}
+.contenedorMaquina{
+    position: relative;
+   
+}
+.box{
+    position: absolute;
+    z-index: 1;
+    top:20em;
+    width: 14em;
+    left: 4em;
+    cursor: pointer;
+}
+.box:hover{
+    transition: 400ms;
+    transform: scale(1.05);
+}
+.startMensaje{
+    position: absolute;
+    font-size: 2em;
+    top:6.5em;
+    left:4em;
+    animation: 4s miAnimacionXYZ infinite;
+    color:white;
+    font-weight: bolder;
+    padding: .4em;
+  }
+  
+  @keyframes miAnimacionXYZ {
+    0% {
+      transform: scale(1);
+      background: white;
+      font: green 2.3em;
+      border-radius: .3em;
+      color: black;
+    
+    }
+  
+    20% {
+      transform: scale(1.2);
+      background: white;
+      font:blue 2.5em;
+      border-radius: .8em;
+      color: red;
+    }
+  
+    40% {
+      transform: scale(1.15);
+      background: whitesmoke;
+      font: yellow 2.9em;
+      border-radius: .8em;
+      color: black;
+    }
+  
+    60% {
+      transform: scale(1.35);
+      background: whitesmoke;
+      font: red 4.2em;
+      border-radius: 1.2em;
+      color: rgb(40, 0, 185);
+    }
+  
+    100% {
+      transform: scale(1);
+      white: white;
+      font:black 2em;
+      border-radius: .3em;
+      color: rgb(19, 18, 18);
+    }
+  }
+.maquinaEscribir{
+    width: 45em;
+    z-index: 2;
+    position: fixed;
+    left: 19em;
+    top: 7em;
+    
+}
+.row1{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(10, 2em);
+    justify-content: center;
+    left: 26em;
+    margin-top: 22.2em;
+    grid-gap: 1.5em;
+    z-index: 2;
+    
+}
+.keyRow1{
+    padding:.1em;
+    width: 2.2em;
+    
+    justify-self: center;
+    background-color: white;   
+    border-bottom: groove gray; 
+    border-left: groove gray; 
+    border-radius: 1em;
+    cursor: pointer;
+    
+}
+.keyRow1:active{
+    transform: scale(1.2);
+}
+
+.row2{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(10, 2em);
+    justify-content: center;
+    left:28em;
+    margin-top: 25.6em;
+    grid-gap: 1.4em;
+    z-index: 2;
+}
+.keyRow2{
+    padding:.1em;
+    width: 2.2em;
+    border-radius: 1em;
+    justify-self: center;
+    background-color: white; 
+    border-bottom: groove gray; 
+    border-left: groove gray; 
+    cursor: pointer;
+}
+.keyRow2:active{
+    transform: scale(1.2);
+}
+.row3{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(10, 2em);
+    justify-content: center;
+    left:29em;
+    margin-top: 29em;
+    grid-gap: 2em;
+    z-index: 2;
+    
+}
+.keyRow3{
+    padding:.1em;
+    width: 2.2em;
+    z-index: 2;
+    justify-self: center;
+    background-color: white;  
+    border-bottom: groove gray; 
+    border-left: groove gray;  
+    cursor: pointer; 
+    border-radius: 1em; 
+    
+}
+.keyRow3:active{
+    transform: scale(1.2);
+}
+.escribir{
+    font-family: 'Special Elite';
+    font-size: 2.6em;
+    z-index: 3;
+    position: relative;
+    left:12em;
+    top:3em;
+
+}
+
+.under{
+    text-decoration-line: underline;
+}
+
+.hide{
+    transition: 1500ms;
+    opacity: 0;
+    cursor: default;
+    
+}
+
+.vidasDiv{
+    display: flex;
+    z-index: 2;
+    background-color: white;
+    border: solid white .3em;
+    border-radius: 2em;
+    position: absolute;
+    width: 3.9em;
+    height: 3.9em;
+    top: 26.9em;
+    left: 12.2em;
+}
+
+.vidas{
+    position: relative;
+    margin-top: -0.02em;
+    margin-left: 0.15em;
+    font-size: 4em;
+    font-weight: bolder;
+    
+    color: green;
+    z-index:2;
+    animation: 2s anividasXYZ infinite;
+}
+@keyframes anividasXYZ{
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.4)
+    }
+    100%{
+        transform: scale(1)
+    }
+
+}
+
+.vida1{
+    animation: 1s vida1XYZ infinite;
+}
+@keyframes vida1XYZ {
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform: scale(1.5)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+.vida0{
+animation:none;
+}
+.result{
+    font-size: 3.5em;
+    position: absolute;
+    z-index: 3;
+    left: 9em;
+    top: 2.6em;
+}
+.meeseek1{
+    margin-left: 3.4em;
+    margin-top: 1em;
+    position: absolute;
+}
+.meeseek2{
+    right: 10em;
+    position: absolute;
+    width: 13em;
+}
+.meeseeks{
+    position:absolute;
+}
+.meeseekFull{
+    z-index: 4;
+}
+
+
+
+
+.canDo{
+    position: absolute;
+    top: 18em;
+    left: 27.9em;
+    z-index: 3;
+}
+.cantDo{
+    position: absolute;
+    top: 17.3em;
+    left: 23.3em;
+    z-index: 3;
+}
+
+.disapear{
+    display: none;
+}

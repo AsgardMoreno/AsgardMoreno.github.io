@@ -91,20 +91,6 @@ function personaje1(){
 
 }
 
-//Anula la seleccion de personajes antes de seleccionar numero de jugadores
-// function evitarSeleccion(){
-//   if( (! (botonVsComp.classList.contains('selectboton') ) ) || (! (botonVsHum.classList.contains('selectboton') ) ) )
-//   {
-//   piedra.removeEventListener('click', personaje1);
-//   pajaro.removeEventListener('click', personaje1);
-//   agua.removeEventListener('click', personaje1);
-//   piedra2.removeEventListener('click', personaje2);
-//   pajaro2.removeEventListener('click', personaje2);
-//   agua2.removeEventListener('click', personaje2);
-//   }
-// }
-//document.querySelector('elboton').classList.contains(la clase que hace que este seleccionado, con comillas y sin el punto)
-
 let numeroGanadas=0;
 let numeroDerrotas=0;
 

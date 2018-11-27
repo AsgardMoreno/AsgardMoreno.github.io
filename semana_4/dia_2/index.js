@@ -1,7 +1,7 @@
 // css: cascade style sheet; sus instrucciones
 //pueden aplicarse como cascada a los elementos descendientes
 
-var miBoton = document.querySelector ('button')
+var miBoton = document.querySelector('button')
 function diHola(){
     window.alert('hola!');
 }
@@ -11,25 +11,25 @@ miBoton.addEventListener('click', diHola);
 //EJ1, asignar un evento al boton que pida un
 //nombre por medio de un prompt, una vez que
 //lo ingrese el usuario mostrarlo con alert
-
-var miBoton2 = document.querySelector('button.ej2')
+var nombreUsuario;
+var miInput = document.querySelector('input.tipo2.tipo3')
 function nombre(){
-    let nombre = window.prompt('Escribe tu nombre')
-    window.alert(nombre);
+    nombreUsuario = window.prompt('Escribe tu nombre')
+    return nombreUsuario;
+    
 }
 
-miBoton2.addEventListener('click', nombre);
+miInput.addEventListener('click', nombre);
 
 //Ej2, que muestre el valor del input en un window alert
 
 
-var miInput = document.querySelector('input.tipo2.tipo3')
+var miBoton2 = document.querySelector('button.ej2')
 
 function inP(){
-    let nombre2 = window.prompt('Escribe tu nombre')
-window.alert(nombre2);
+window.alert(nombreUsuario)
 }
-miInput.addEventListener('click', inP);
+miBoton2.addEventListener('click', inP);
 
 //funciones anonimas: funcion sin nombre, solo funciona dentro
 //de ese pedazo de codigo
@@ -53,26 +53,32 @@ miBoton.addEventListener('click', function() {
 //no puede seguir, que lo muestre en head
 
 
-let contraValue = document.querySelector ('input.me').value;
-let cab2 = document.querySelector ('h2');
+let contraUser = document.querySelector('input.me');
+let cab2 = document.querySelector('h2');
 
-let miboton3 = document.querySelector ('button.con');
+let miboton3 = document.querySelector('button.con');
 
-const contraUser = '12345';
+const contraValue = '12345';
+const user = "oscar";
+
 let counter = 3;
-
 function contrasena(){
-    if (contraValue === contraUser){
+    
+    console.log("contra " + contraUser.value + " ,usuario " + nombreUsuario )
+    if ((contraValue === contraUser.value) && (user === nombreUsuario)){
         cab2.innerText = "Acceso Permitido"
-        contraValue = document.querySelector('input.me[placeholder="disabled"]');
+        document.querySelector('input.me').disabled = true;
+        document.querySelector('input.me').placeholder = 'Ya accedio!';
     }
-    else{ 
-        contraValue.innerText = "";
-        counter = counter - 1;
-        cab2.innerText = "Tienes " + counter + " intentos más";  
-        if (counter = 0){
+    if ((contraValue !== contraUser.value) || (user !== nombreUsuario)){
+        counter = counter - 1
+        contraUser.value = "";
+        cab2.innerText = "Tienes " + counter + " intentos"; 
+         
+        if (counter <= 0){
             cab2.innerText = "Cuenta Bancaria Bloqueada";
-            contraValue = document.querySelector('input.me[placeholder="disabled"]');  
+            document.querySelector('input.me').disabled = true;
+            document.querySelector('input.me').placeholder = 'disabled';
         } 
     }
 } 

@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: radial-gradient(#CCC 10%, black 99% );
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.tabs{
+ display: grid;
+ grid-template-columns: 120px 120px 120px 120px;
+ grid-gap: 2px;
+ justify-content: center;
+ justify-items: center;
+ width: 350px;
+ height: 40px;
+ margin-left: 25%;
+ margin-top: 100px;
+ 
+  
+}
+.tab1, .tab2, .tab3, .tab4{
+ 
+  height: 40px;
+  width: 120px;
+  background-color: rgb(206, 123, 0);
+  font: 14px bolder;
+  vertical-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.info1, .info2, .info3, .info4{
+  height: 250px;
+  width: 600px;
+  font-size: 16px;
+  justify-content: center;
+  margin-left: 15%;
+  background-color: aliceblue;
+  background-image: radial-gradient(rgba(0, 217, 255, 0.418) .3%, whitesmoke 4%, white 6%, whitesmoke 8%, white 14%, rgba(17, 77, 126, 0.233) 99%);
+  text-align: center;
+  text-justify: newspaper;
+  padding: 30px;
+  border: black 5px groove;
+  margin-top:1px;
+}
+
+.seleccionado{
+  border-radius: 20px;
+  border: solid black 2px;
+  border-bottom: 5px black solid; 
+  
+  
+}
+
+.ocultar{
+  display:none;
+}
+
+

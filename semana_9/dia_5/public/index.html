@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Descarga y Subida de Archivos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Firebase 🔥 Storage</h1>
+
+  <div class="todo">
+  <div class="contenedor">1
+    <div class="form">
+      <input type="file" accept="image/*" class="input1" id="1">
+      <div class="guardar1">💽</div>
+    </div>
+    <div >
+      <img src="" class="imagen1">
+    </div>
+  </div>
+  <div class="contenedor">2
+    <div class="form">
+      <input type="file" accept="image/*"  class="input2" id="2">
+      <div class="guardar2">💽</div>
+    </div>
+    <div >
+      <img src="" class="imagen2">
+    </div>
+  </div>
+  <div class="contenedor">3
+    <div class="form">
+      <input type="file" accept="image/*" class="input3" id="3">
+      <div class="guardar3">💽</div>
+    </div>
+    <div >
+      <img src="" class="imagen3">
+    </div>
+  </div>
+</div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCJr38M8nH18yHzLs8QCylllTFk7yAlv1g",
+        authDomain: "prototipo-1-a9ded.firebaseapp.com",
+        databaseURL: "https://prototipo-1-a9ded.firebaseio.com",
+        projectId: "prototipo-1-a9ded",
+        storageBucket: "prototipo-1-a9ded.appspot.com",
+        messagingSenderId: "639597007637"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="index.js"></script>
+</body>
+</html>

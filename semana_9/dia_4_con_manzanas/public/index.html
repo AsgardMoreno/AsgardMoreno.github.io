@@ -4,11 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
   <title>Chat</title>
 </head>
 <body>
+<h1>Chat con Firebase y Manzanas 🍎🍎 </h1>  
+<div class="auth">
+  <div class="login">
+   Login 
+  </div>
+  <div class="logout">Logout</div>
+</div>
+<div class="contenedor">
+<div class="mensajes">
   
-<!-- esto se pone antes del scrip de js -->
+</div>
+<div class="cuadro"></div>
+<input type="text">
+</div>
+
+
+  
 <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -21,7 +38,6 @@
     messagingSenderId: "639597007637"
   };
   firebase.initializeApp(config);
-    
 </script>
 <script src="index.js"></script>
 </body>

@@ -303,7 +303,7 @@ p{
     flex-direction: row;
 }
 .mascara{
-    clip-path: circle(3px at center);
+    clip-path: circle(0px at center);
     
 } 
 
